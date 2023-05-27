@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+{%  load static %}
+<html lang="en">
+
+<!-- Mirrored from dreamspos.dreamguystech.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Apr 2023 05:44:32 GMT -->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dreams POS - Inventory Management HTML Template</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.png'%}">
+<meta name="description" content="Dreams POS is an all-in-one solution for your E-Commerce needs. Bestselling e-commerce theme with beautiful and customizable designs.">
+
+<meta property="og:url" content="index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dreams POS - Inventory Management HTML Template">
+<meta property="og:description" content="Dreams POS is an all-in-one solution for your E-Commerce needs. Bestselling e-commerce theme with beautiful and customizable designs.">
+<meta property="og:image" content="{% static 'assets/img/preview-banner.html'%}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="index.html">
+<meta property="twitter:url" content="index.html">
+<meta name="twitter:title" content="Dreams POS - Inventory Management HTML Template">
+<meta name="twitter:description" content="Dreams POS is an all-in-one solution for your E-Commerce needs. Bestselling e-commerce theme with beautiful and customizable designs.">
+<meta name="twitter:image" content="{% static 'assets/img/preview-banner.html'%}">
+
+<link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css'%}">
+
+<link rel="stylesheet" href="{% static 'assets/css/feather.css'%}">
+
+<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/fontawesome.min.css'%}">
+<link rel="stylesheet" href="{% static 'assets/plugins/fontawesome/css/all.min.css'%}">
+
+<link rel="stylesheet" href="{% static 'assets/plugins/aos/aos.css'%}">
+
+<link rel="stylesheet" href="{% static 'assets/css/style.css'%}">
+</head>
+<body>
+
+<section id="package-block" class="package-list text-center aos" data-aos="fade-down">
+<h4 class="package-content">
+
+<a href="javascript:void(0)" class="package-close"><i class="feather-x"></i></a>
+</h4>
+</section>
+
+
+<header id="header" class="site-header home-header  home-header-while header-landing">
+<div class="container">
+<div class="row align-items-center">
+<div class="main-menu-wrapper">
+<div class="menu-header">
+<a href="index-2.html" class="menu-logo">
+<img src="{% static 'assets/img/pos-logo.png'%}" class="img-fluid" alt="Logo">
+</a>
+<a id="menu-close" class="menu-close" href="javascript:void(0);">
+<i class="fas fa-times"></i>
+</a>
+</div>
+<ul class="main-nav bg-trans">
+<li>
+<a href="index-2.html">Home</a>
+</li>
+<li>
+<a href="#features">Features</a>
+</li>
+<li>
+<a href="#demos">Demo</a>
+</li>
+<li>
+<a href="#pages">Pages</a>
+</li>
+<li>
+<a href="javascript:void(0);">Logout</a>
+</li>
+<li>
+ <a href="javascript:void(0);" target="_blank">Purchase</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-3 col-sm-12 col-12 res-center">
+<div class="site">
+<a id="mobile-btn" href="javascript:void(0);">
+<span class="bar-icon">
+<span></span>
+<span></span>
+<span></span>
+</span>
+</a>
+<div class="site-brand">
+<a href="index-2.html" class="site-brand-logo"><img src="{% static 'assets/img/pos-logo.png'%}" alt="logo" class="img-fluid"></a>
+</div>
+</div>
+</div>
+<div class="col-md-9 col-7">
+<div class="right-header float-right d-flex">
+<nav class="landing-menu">
+<ul class="main-list">
+<li class="list-data">
+<a href="home" class="landing-page-list">Home</a>
+</li>
+<li class="list-data">
+<a href="#features" class="landing-page-list">Products</a>
+</li>
+<li class="list-data">
+<a href="#demos" class="landing-page-list">Suppliers</a>
+</li>
+<li class="list-data">
+<a href="#pages" class="landing-page-list">Stocks</a>
+</li>
+<li class="list-data">
+    <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
+    <span class="user-info">
+    <span class="user-letter">
+    <!--<img src="https://dreamspos.dreamguystech.com/html/template/assets/img/profiles/avator1.jpg" alt="" class="img-fluid">-->
+    </span>
+    <span class="user-detail">
+    <span class="user-name">Register</span>
+    </span>
+    </span>
+    </a>
+    <div class="dropdown-menu menu-drop-user">
+    <div class="profilename">
+    <div class="profileset">
+    <span class="status online"></span></span>
+    </div>
+    <hr class="m-0">
+    <a class="dropdown-item" href="imsadmin/adminreg"> <i class="me-2" data-feather="user"></i> Admin</a>
+    <a class="dropdown-item" href="company/comreg"> <i class="me-2" data-feather="user"></i> Company</a>
+    <a class="dropdown-item" href="supplier/suppreg"><i class="me-2" data-feather="settings"></i>Supplier</a>
+    <a class="dropdown-item" href="imsuser/userreg"><i class="me-2" data-feather="settings"></i>Customer</a>
+    <hr class="m-0">
+    </div>
+    </div>
+    </li>
+    <li class="list-data">
+        <a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
+        <span class="user-info">
+        <span class="user-letter">
+        <!--<img src="https://dreamspos.dreamguystech.com/html/template/assets/img/profiles/avator1.jpg" alt="" class="img-fluid">-->
+        </span>
+        <span class="user-detail">
+        <span class="user-name">Login</span>
+        </span>
+        </span>
+        </a>
+        <div class="dropdown-menu menu-drop-user">
+        <div class="profilename">
+        <div class="profileset">
+        <span class="status online"></span></span>
+        </div>
+        <hr class="m-0">
+        <a class="dropdown-item" href="imsadmin/adminlogin"> <i class="me-2" data-feather="user"></i> Admin</a>
+        <a class="dropdown-item" href="company/comlogin"> <i class="me-2" data-feather="user"></i> Company</a>
+        <a class="dropdown-item" href="employee/employlogin"><i class="me-2" data-feather="settings"></i>Employee</a>
+        <a class="dropdown-item" href="supplier/supplogin"><i class="me-2" data-feather="settings"></i>Supplier</a>
+        <a class="dropdown-item" href="imsuser/userlogin"> <i class="me-2" data-feather="user"></i> Customer</a>
+        <hr class="m-0">
+        </div>
+        </div>
+        </li> 
+</ul>
+</nav>
+<!--<div class="right-header-button ">
+<a href="signin" target="_blank" class="btn btn-buy">
+Logout
+</a>
+</div>-->
+</div>
+</div>
+</div>
+</div>
+</header>
+
+
+<section class="banner">
+<div class="banner-color-bg aos" data-aos="fade-up">
+<img src="{% static 'assets/img/spread-blue.png'%}" alt="">
+<img src="{% static 'assets/img/spread-red.png'%}" alt="">
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-5 col-md-12">
+<div class="banner-content">
+<h3 class="aos" data-aos="fade-up">The Most Customizable</h3>
+<h1 class="aos" data-aos="fade-up" data-aos-delay="200">E-Commerce Theme</h1>
+<p class="aos" data-aos="fade-up" data-aos-delay="400">A complete eCommerce Solution. Create the perfect E-Commerce website with Dreams POS</p>
+<div class="banner-btn aos" data-aos="fade-up" data-aos-delay="600">
+<a href="#features">Explore Features</a>
+<a href="#demos">View Demos</a>
+</div>
+</div>
+</div>
+<div class="col-lg-7">
+<div class="banner-container aos" data-aos="fade-up">
+<div class="floating-imgs-banner-section">
+<img src="{% static 'assets/img/orange.png'%}" alt="">
+<img src="{% static 'assets/img/girl.png'%}" alt="">
+</div>
+<div class="banner-img">
+<img src="{% static 'assets/img/banner.png'%}" class="img-fluid" alt="">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="features-section aos" data-aos="zoom-in">
+<div class="container">
+<div class="list-of-features">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<a href="javascript:void(0);">
+<div class="feature-content">
+<div class="feature-icon">
+<img src="{% static 'assets/img/dollar.png'%}" alt="">
+</div>
+<p class="mb-0">Boost Sales Features</p>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-md-4">
+<a href="javascript:void(0);">
+<div class="feature-content">
+<div class="feature-icon">
+<img src="{% static 'assets/img/box.png'%}" alt="">
+</div>
+<p class="mb-0">Lifetime Updates</p>
+</div>
+</a>
+</div>
+<div class="col-lg-4 col-md-4">
+<a href="javascript:void(0);">
+<div class="feature-content">
+<div class="feature-icon">
+<img src="{% static 'assets/img/set.png'%}" alt="">
+</div>
+<p class="mb-0">Fully Customizable</p>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="technology-section section-padding">
+<div class="container">
+<div class="row align-items-center tech-box">
+<div class="col-lg-6">
+<div class="technology-img aos" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<img src="{% static 'assets/img/features.png'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6">
+<div class="technology-content">
+<h2 class="aos" data-aos="flip-left" data-aos-delay="200">Core & Simple</h2>
+<h4 class="aos" data-aos="flip-right" data-aos-delay="600">TECHNOLOGIES</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="demos" class="dashboard-design-section section-padding">
+<div class="dashboard-floating-bg">
+<img src="{% static 'assets/img/big-circle.png'%}" alt="">
+<img src="{% static 'assets/img/orange-circle-2.png'%}" alt="">
+<img src="{% static 'assets/img/pac-man.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-1.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-2.png'%}" alt="">
+<img src="{% static 'assets/img/spiral.png'%}" alt="">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+<img src="{% static 'assets/img/pac-man-blue.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-1.png'%}" alt="">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title aos" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<h2>Stunning <span>Dashboard Design</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</div>
+</div>
+<div class="dashboard-types">
+<div class="row">
+<div class="col-lg-12">
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+HTML
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="html/template/index.html" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="html/template-rtl/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+Laravel
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="laravel/template/public/index.html" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="laravel/template-rtl/public/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+Vuejs
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="vuejs/template/index.html" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="vuejs/template-rtl/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+Angular
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="angular/template/index.html" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="angular/template-rtl/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+Reactjs
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="reactjs/template/index.html" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="reactjs/template-rtl/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+Tailwind
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+ <a href="tailwind/template/index.html" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="tailwind/template-rtl/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+Nodejs
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="https://dreamspos-nodejs.dreamguystech.com/login" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="html/template-rtl/index.html" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+<div class="demo-section row">
+<div class="col-lg-6 col-md-6">
+<div class="demo-img aos" data-aos="flip-right">
+<img src="{% static 'assets/img/dashboards.jpg'%}" class="img-fluid" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-6">
+<div class="demo-content">
+<h4>
+CodeIgniter
+</h4>
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+<div class="d-flex flex-wrap demo-btn-col">
+<a href="{% static 'ci/template/public/signin.html'%}" target="_blank" class="btn view-btn">View Demo - LTR</a>
+<a href="{% static 'ci/template-rtl/public/index.html'%}" target="_blank" class="btn view-btn">View Demo - RTL</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="pages" class="admin-page-section section-padding">
+<div class="admin-floating-bg">
+<img src="{% static 'assets/img/pac-man.png'%}" alt="">
+<img src="{% static 'assets/img/pac-man-blue.png'%}" alt="">
+<img src="{% static 'assets/img/spiral.png'%}" alt="">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-1.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-2.png'%}" alt="">
+<img src="{% static 'assets/img/blue-circle-2.png'%}" alt="">
+ </div>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title aos" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<h2>Admin<span> Pages</span></h2>
+<p>Perfect Live Demos</p>
+</div>
+</div>
+</div>
+<div class="admin-page-list">
+<div class="row">
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="200">
+<div class="page-img">
+<a href="html/template/productlist.html" target="_blank"><img src="{% static 'assets/img/product.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/productlist.html" target="_blank">Product List<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="400">
+<div class="page-img">
+<a href="html/template/purchaselist.html" target="_blank"><img src="{% static 'assets/img/purchase.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/purchaselist.html">Purchase List<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="600">
+<div class="page-img">
+<a href="html/template/salesreturnlists.html" target="_blank"><img src="{% static 'assets/img/sales.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/salesreturnlists.html" target="_blank">Sales Return List<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="200">
+<div class="page-img">
+<a href="html/template/importproduct.html" target="_blank"><img src="{% static 'assets/img/import.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/importproduct.html" target="_blank">Import Products<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="400">
+<div class="page-img">
+<a href="html/template/categorylist.html" target="_blank"><img src="{% static 'assets/img/catagories.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/categorylist.html" target="_blank">Categories<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="600">
+<div class="page-img">
+<a href="html/template/supplierlist.html" target="_blank"><img src="{% static 'assets/img/supplier.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/supplierlist.html" target="_blank">Supplier List<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="200">
+<div class="page-img">
+<a href="html/template/countrieslist.html" target="_blank"><img src="{% static 'assets/img/place.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/countrieslist.html" target="_blank">Places<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="400">
+<div class="page-img">
+<a href="html/template/chart-apex.html" target="_blank"><img src="{% static 'assets/img/chart.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/chart-apex.html" target="_blank">Charts<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="600">
+<div class="page-img">
+<a href="html/template/purchasereport.html" target="_blank"><img src="{% static 'assets/img/report.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/purchasereport.html" target="_blank">Reports<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="200">
+<div class="page-img">
+<a href="html/template/chat.html" target="_blank"><img src="{% static 'assets/img/chat.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/chat.html" target="_blank">Chat<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="400">
+<div class="page-img">
+<a href="html/template/calendar.html" target="_blank"><img src="{% static 'assets/img/calender.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/calendar.html" target="_blank">Calendar<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 page-list-box aos" data-aos="fade-up" data-aos-delay="600">
+<div class="page-img">
+<a href="html/template/email.html" target="_blank"><img src="{% static 'assets/img/email.jpg'%}" class="img-fluid" alt=""></a>
+</div>
+<div class="page-name">
+<a href="html/template/email.html" target="_blank">Email<i class="feather-arrow-right ms-2"></i></a>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<section class="responsive-section section-padding">
+<div class="responsive-floating-bg">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-1.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-2.png'%}" alt="">
+<img src="{% static 'assets/img/pac-man.png'%}" alt="">
+<img src="{% static 'assets/img/blue-circle.png'%}" alt="">
+<img src="{% static 'assets/img/orange-circle.png'%}" alt="">
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title aos" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<h2>100%<span> Responsive</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="responsive-img-box aos" data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="top-bottom">
+<div class="overlap-img">
+<img src="{% static 'assets/img/responsive-left-img.png'%}" class="img-fluid aos" data-aos="zoom-in" data-aos-delay="300" alt="">
+<img src="{% static 'assets/img/responsive-right-img.png'%}" class="img-fluid aos" data-aos="zoom-in" data-aos-delay="300" alt="">
+</div>
+{% comment %} <img src="{% static 'assets/img/responsive-center-img.png'%}" class="img-fluid main-img" alt=""> {% endcomment %}
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="why-choose-us section-padding">
+<div class="why-choose-us-bg">
+<img src="{% static 'assets/img/pac-man.png'%}" alt="">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-2.png'%}" alt="">
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-6 d-flex align-items-center justify-item-center">
+<div class="us-img aos" data-aos="fade-right">
+<img src="{% static 'assets/img/boy-img.png'%}" alt="">
+<img src="{% static 'assets/img/why-us-bg.png'%}" class="img-fluid boy-img" alt="">
+</div>
+</div>
+<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+<div class="why-us-content">
+<div class="section-title aos" data-aos="fade-left">
+<h2><span>Why Choose Us ?</span></h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae risus nec dui venenatis dignissim. </p>
+</div>
+<div class="us-faq aos" data-aos="fade-left" data-aos-delay="200">
+<div class="accordion" id="accordionExample">
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingOne">
+<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+Lorem ipsum dolor sit amet
+</button>
+</h2>
+<div id="collapseOne" class="accordion-collapse collapse shade show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingTwo">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+Lorem ipsum dolor sit amet
+</button>
+</h2>
+<div id="collapseTwo" class="accordion-collapse collapse shade" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingThree">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+Lorem ipsum dolor sit amet
+</button>
+</h2>
+<div id="collapseThree" class="accordion-collapse collapse shade" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
+</div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header" id="headingFour">
+<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+Lorem ipsum dolor sit amet
+</button>
+</h2>
+<div id="collapseFour" class="accordion-collapse collapse shade" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+<div class="accordion-body">
+<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h6>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section id="features" class="theme-features section-padding">
+<div class="feature-floating-bg">
+<img src="{% static 'assets/img/pac-man.png'%}" alt="">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-2.png'%}" alt="">
+<img src="{% static 'assets/img/Triangle-1.png'%}" alt="">
+<img src="{% static 'assets/img/pac-man-blue.png'%}" alt="">
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title aos" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<h2> Main Theme <span>Features</span></h2>
+<p>What makes Dreams POS Powerfull </p>
+</div>
+</div>
+</div>
+<div class="theme-feature-content aos" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+<ul>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/dashboard.svg'%}" alt="">
+</div>
+<p>Admin Dashboard</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/brand.svg'%}" alt="">
+</div>
+<p>Brand List</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/imports.svg'%}" alt="">
+</div>
+<p>Import Products</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/customers.svg'%}" alt="">
+</div>
+<p>Customer List</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/fax.svg'%}" alt="">
+</div>
+<p>Print Barcode</p>
+</li>
+</ul>
+</div>
+<div class="theme-feature-content aos" data-aos="fade-up" data-aos-delay="200" data-aos-anchor-placement="top-bottom">
+<ul>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/star.svg'%}" alt="">
+</div>
+<p>Ratings</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/search.svg'%}" alt="">
+</div>
+<p>Seo Ready</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/chat.svg'%}" alt="">
+</div>
+<p>Responsive & Retina</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/repeat.svg'%}" alt="">
+</div>
+<p>Free Update</p>
+</li>
+</ul>
+</div>
+<div class="theme-feature-content aos" data-aos="fade-up" data-aos-delay="400" data-aos-anchor-placement="top-bottom">
+<ul>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/list.svg'%}" alt="">
+</div>
+<p>Sales List</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/payment.svg'%}" alt="">
+</div>
+<p>Payment Settings</p>
+</li>
+<li>
+ <div class="feature-icons">
+<img src="{% static 'assets/img/icon/store.svg'%}" alt="">
+</div>
+<p>Store List</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/van.svg'%}" alt="">
+</div>
+<p>Supplier List</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/tax.svg'%}" alt="">
+</div>
+<p>Tax Rates</p>
+</li>
+</ul>
+</div>
+<div class="theme-feature-content aos" data-aos="fade-up" data-aos-delay="600" data-aos-anchor-placement="top-bottom">
+<ul>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/web.svg'%}" alt="">
+</div>
+<p>Country & Sales List</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/cart.svg'%}" alt="">
+</div>
+<p>POS</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/quote.svg'%}" alt="">
+</div>
+<p>Testimonial</p>
+</li>
+<li>
+<div class="feature-icons">
+<img src="{% static 'assets/img/icon/walet.svg'%}" alt="">
+</div>
+<p>Currency Settings</p>
+</li>
+</ul>
+</div>
+</div>
+</section>
+
+
+<section class="contact-us aos" data-aos="flip-down">
+<div class="container">
+<div class="row d-flex justify-content-center">
+<div class="col-lg-10">
+<div class="contact-us-box">
+<div class="contact-title">
+<h3>LOOKING FOR A CUSTOM DESIGN?</h3>
+<p>We (Dreamguys Technologies) are happy to customise your products based on your needs,<span> send us a note</span></p>
+</div>
+<div class="contact-btn">
+<a href="tel:+91 9942577886"><i class="feather-phone-call me-2"></i>Call Us</a>
+<a href="{% static 'cdn-cgi/l/email-protection.html#3c5e494f5552594f4f7c584e595d515b49454f48595f54125f5351'%}"><i class="feather-mail me-2"></i>Email Us</a>
+<a href="tel:+91 9942577886"><i class="feather-message-square me-2"></i>Whatsapp</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="our-details-section section-padding">
+<div class="foot-floating-bg">
+<img src="{% static 'assets/img/Group.png'%}" alt="">
+<img src="{% static 'assets/img/loading-blue.png'%}" alt="">
+<img src="{% static 'assets/img/Polygon%202.png'%}" alt="">
+<img src="{% static 'assets/img/Polygon-orange.png'%}" alt="">
+<img src="{% static 'assets/img/spiral.png'%}" alt="">
+</div>
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-4 col-md-6">
+<div class="our-detail-content aos" data-aos="fade-up">
+<div class="our-details-title">
+<h5>Social Links</h5>
+</div>
+<a href="https://codecanyon.net/user/dreamguys/portfolio" target="_blank"><div class="list-text"><img src="{% static 'assets/img/code.png'%}" alt=""></div></a>
+<a href="https://themeforest.net/user/dreamguys/portfolio?sso=1&amp;_ga=2.145580214.328838055.1659356977-1318137056.1659088131" target="_blank"><div class="list-text list-two"><img src="{% static 'assets/img/themeforest.png'%}" alt=""></div></a>
+<a href="javascript:void(0);">
+<div class="list-text">
+<a href="https://www.facebook.com/dreamguystech/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.youtube.com/channel/UCNi1cF0PYvQIg3uvxLrd3yA" target="_blank"><i class="fab fa-youtube"></i></a>
+<a href="https://twitter.com/dreamguystech" target="_blank"><i class="fab fa-twitter"></i></a>
+<a href="https://in.pinterest.com/dreamguys_tech/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+<a href="https://in.linkedin.com/company/dreamguystech" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="our-detail-content aos" data-aos-delay="300" data-aos="fade-up">
+<div class="our-details-title">
+<h5>Other Templates</h5>
+</div>
+<a href="https://dreamguys.co.in/preadmin/" target="_blank"><div class="list-text list-two"><img src="{% static 'assets/img/preadmin.png'%}" class="me-2" alt=""><p>Preadmin <span>Admin Template</span></p></div></a>
+<a href="https://medifab.dreamguystech.com/" target="_blank"><div class="list-text"><img src="{% static 'assets/img/medifab.png'%}" class="me-2" alt=""><p>Medifab <span>Medical Template</span></p></div></a>
+<a href="https://smarthr.dreamguystech.com/" target="_blank"><div class="list-text list-two"><img src="{% static 'assets/img/hr.png'%}" class="me-2" alt=""><p>SmartHR <span>Mobile Template</span></p></div></a>
+</div>
+</div>
+<div class="col-lg-4 col-md-6">
+<div class="our-detail-content aos" data-aos-delay="600" data-aos="fade-up">
+<div class="our-details-title">
+<h5>Contact Info</h5>
+</div>
+<a href="https://dreamguystech.com/" target="_blank"><div class="list-text"><p><i class="feather-globe me-2"></i> www.dreamguys.co.in</p></div></a>
+<a href="{% static 'cdn-cgi/l/email-protection.html#a0c1c4cdc9cee0c4d2c5c1cdc7d5d9d38ec3cf8ec9ce'%}" target="_blank"><div class="list-text list-two"><p><i class="feather-mail me-2"></i> <span class="__cf_email__" data-cfemail="f190959c989fb1958394909c96848882df929edf989f">[email&#160;protected]</span></p></div></a>
+<a href="tel:+44-20-8638-8690" target="_blank"><div class="list-text"><p><i class="fab fa-whatsapp me-2"></i> +44-20-8638-8690</p></div></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="footer">
+<div class="container">
+<div class="scroll-top">
+<a href="#" class="top"><i class="fas fa-caret-up"></i></a>
+</div>
+<div class="inner-footer  d-flex justify-content-between align-items-center">
+<div class="left-footer-content d-flex align-items-center">
+<p class="mb-0">A product of</p>
+<a href="https://dreamguystech.com/" target="_blank"><img src="{% static 'assets/img/company-name.png'%}" alt=""></a>
+</div>
+<div class="right-footer-content">
+<a href="https://dreamguystech.com/" target="_blank"><p>© 2022 Dreamguys Technologies Pvt. Ltd.,</p></a>
+</div>
+</div>
+</div>
+</section>
+
+
+<script data-cfasync="false" src="{% static 'cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js'%}"></script><script src="{% static 'assets/js/jquery-3.6.0.min.js'%}"></script>
+
+<script src="{% static 'assets/js/bootstrap.bundle.min.js'%}"></script>
+
+<script src="{% static 'assets/js/feather.min.js'%}"></script>
+
+<script src="{% static 'assets/plugins/aos/aos.js'%}"></script>
+
+<script src="{% static 'assets/js/script.js'%}"></script>
+
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5d7c946e9f6b7a4457e1a16b/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+
+</body>
+
+<!-- Mirrored from dreamspos.dreamguystech.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 24 Apr 2023 05:44:58 GMT -->
+</html>
