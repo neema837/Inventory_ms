@@ -12,17 +12,21 @@ class Suppliers(models.Model):
     spzip=models.CharField(max_length=20)
     spcountry=models.CharField(max_length=20)
     splic=models.FileField(upload_to="slicense")
+    splogo=models.FileField(upload_to="slogo",null=True,blank=True)
     sppwd=models.CharField(max_length=20,null=True,blank=True)
     approve=models.BooleanField(default=False)
     reject=models.BooleanField(default=False)
     status=models.CharField(max_length=20,null=True,blank=True)
 
+    def __str__(self):
+        return self.spname
+    
 class SproductCategory(models.Model):
    catname=models.CharField(max_length=20)
    supid=models.ForeignKey(Suppliers,on_delete=models.CASCADE)
 
-   def __str__(self):
-        return self.catname
+   
+
 #Product Table
 class Sproduct(models.Model):
     sprodname=models.CharField(max_length=20)
@@ -38,7 +42,6 @@ class Sproduct(models.Model):
     sprodcat=models.ForeignKey(SproductCategory,on_delete=models.CASCADE,null=True,blank=True)
     supid=models.ForeignKey(Suppliers,on_delete=models.CASCADE,null=True,blank=True)
 
-    def __str__(self):
-        return self.sprodname
+    
 
 

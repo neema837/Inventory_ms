@@ -5,5 +5,7 @@ from.models import*
 admin.site.register(Employdata)
 admin.site.register(Product)
 admin.site.register(ProductCategory)
+admin.site.register(Tasks)
+
 
 

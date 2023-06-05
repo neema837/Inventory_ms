@@ -905,7 +905,7 @@
                                 <option class="dropdown-item" value="all">All Products</option>
                                 </a>
                                 {% for c in pcat %}
-                            <a href="{% url 'prod_by_cat' c.id %}"> <option class="dropdown-item" value="{{c.id}}">{{c.catname|capfirst}}</option></a>
+                            <a href="{% url 'eprod_by_cat' c.id %}"> <option class="dropdown-item" value="{{c.id}}">{{c.catname|capfirst}}</option></a>
                                 {% endfor %}   
                             
                             </div>

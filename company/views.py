@@ -19,6 +19,8 @@ def comlogin(request):
       except Companies.DoesNotExist as e:
          messages.info(request,"Invalid Credentials")
     return render(request,'company/comlogin.html')
+
+
 def comreg(request):
     if request.method=='POST':
         cpname=request.POST['cpname']
@@ -41,8 +43,12 @@ def comreg(request):
                               cplic=cplic,cplogo=cplogo)
             saveval.save()
     return render(request,'company/comreg.html')
+
+
 def comhome(request):
    return render(request,'company/comhome.html')
+
+
 def caddemploy(request):
    if request.method=='POST':
       cmpid=request.session['id']
@@ -62,6 +68,16 @@ def caddemploy(request):
          return redirect('send_empmail',eid=request.session['empid'])
    return render(request,'company/caddemploy.html')
 
+
+def cviewemploy(request):
+    cmpid=request.session['id']
+    print(cmpid)
+    empinfo=Employdata.objects.filter(cmpid=cmpid)
+    context={
+        'empinfo':empinfo
+    }
+    return render(request,'company/cviewemploy.html',context)
+
 def send_empmail(request,eid):
       emp=Employdata.objects.get(id=eid)
       if request.method=='POST':
@@ -78,6 +94,46 @@ def send_empmail(request,eid):
                   emailid and the given password" +format(password)"to login to the system'''
           send_mail(subject, message, EMAIL_HOST_USER, [recepient], fail_silently = False)
       return render(request,'company/send_empmail.html',{'emp':emp})
+
+
+def cviewsuppliers(request):
+    suppinfo=Suppliers.objects.all()
+    context={
+        'suppinfo':suppinfo
+    }
+    return render(request,'company/cviewsuppliers.html',context)
+
+
+def viewspproducts(request,sid):
+    spproducts = Sproduct.objects.filter(supid=sid)
+    request.session['sid']= sid
+    spcat=SproductCategory.objects.filter(supid=sid)
+    sprod=Sproduct.objects.filter(supid=sid)
+    context={
+                 'spproducts':spproducts,
+                 'spcat':spcat,
+                 'sprod':sprod,
+                 'sid':sid,
+
+
+    }
+
+    return render(request,'company/viewspproducts.html',context)
+
+
+def sprod_by_cat(request,catid):
+     print(catid)
+     print("hello")
+     sid=request.session['sid']
+     print(sid)
+     sprod=Sproduct.objects.filter(sprodcat=catid,supid=sid)
+     spcat=SproductCategory.objects.filter(supid=sid)
+     context={
+                  'sprod':sprod,
+                  'spcat':spcat,
+                  'sid':sid
+             }     
+     return render(request,'company/viewspproducts.html',context)
 
 
 

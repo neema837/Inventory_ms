@@ -20,6 +20,8 @@ urlpatterns = [
     path('add_to_wishlist<int:wlistid>',views.add_to_wishlist, name="add_to_wishlist"),
     path('remove_wlproduct<int:rmvewlid>',views.remove_wlproduct, name="remove_wlproduct"),
     path('usercheckout',views.usercheckout,name="usercheckout"),
+    path('billgeneration',views.billgeneration,name="billgeneration"),
+
 
 
 

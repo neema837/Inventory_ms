@@ -5,5 +5,9 @@ from.models import*
 admin.site.register(Customers)
 admin.site.register(Cart)
 admin.site.register(WishList)
+admin.site.register(NewAddress)
+admin.site.register(Order)
+
+
 
 

@@ -1,5 +1,9 @@
 from django.db import models
 from supplier.models import *
+from company.models import *
+from employee.models import *
+from django.utils import timezone
+
 
 # Create your models here.
 class Companies(models.Model):
@@ -21,6 +25,19 @@ class Companies(models.Model):
 
     def __str__(self):
         return self.cpname
+
+class Cpurchase(models.Model):
+    purchasedate=models.DateField(default=timezone.now().date())
+    purchaseno=models.BigIntegerField()
+    supid=models.ForeignKey(Suppliers,on_delete=models.CASCADE,null=True,blank=True)
+    prodid=models.ForeignKey(Sproduct,on_delete=models.CASCADE,null=True,blank=True)
+    cmpid=models.ForeignKey(Companies,on_delete=models.CASCADE,null=True,blank=True)
+    purchaseqty=models.BigIntegerField()
+    totalprice=models.BigIntegerField()
+    paymentstatus=models.BooleanField(default=False)
+    orderstatus=models.BooleanField(default=False)
+
+
 
     
 

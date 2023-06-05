@@ -1,6 +1,6 @@
 from django.db import models
 from company.models import *
-
+from django.utils import timezone
 
 # Create your models here.
 #Employ table
@@ -10,6 +10,18 @@ class Employdata(models.Model):
     empphone=models.BigIntegerField()
     emppwd=models.CharField(max_length=20,null=True,blank=True)
     status=models.BooleanField(default=False)
+    designation=models.CharField(max_length=20,null=True,blank=True)
+    cmpid=models.ForeignKey(Companies,on_delete=models.CASCADE,null=True,blank=True)
+
+class Tasks(models.Model):
+    taskname=models.CharField(max_length=20)
+    taskdesc=models.CharField(max_length=20)
+    assigndate=models.DateField(default=timezone.now)
+    duedate=models.DateField()
+    timeofcomp=models.TimeField()
+    priority=models.CharField(max_length=20,null=True,blank=True)
+    status=models.BooleanField(default=False)
+    empid=models.ForeignKey(Employdata,on_delete=models.CASCADE)
     cmpid=models.ForeignKey(Companies,on_delete=models.CASCADE,null=True,blank=True)
    
 #Product category table adding using modal

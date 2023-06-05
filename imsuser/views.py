@@ -5,6 +5,9 @@ from django.http import*
 from django.contrib import messages
 from employee.models import*
 from company.models import*
+from IMS.settings import RAZORPAY_API_KEY,RAZORPAY_API_SECRET_KEY
+import razorpay
+import random,string
 
 
 # Create your views here.
@@ -144,6 +147,7 @@ def productview(request,prodid):
                 return redirect('productview', prodid=prodid)
             else:
                 cartitem = Cart(uprodqty=uprodqty,prodid_id=prodid,uid_id=request.session['userid'],status=True)
+
                 cartitem.save()
                 messages.info(request, f'{prodid}Item added to the cart.')
                 return redirect('productview',prodid=prodid)
@@ -282,10 +286,81 @@ def userwishlist(request):
 def usercheckout(request):
     userid=request.session['userid']
     userdet=Customers.objects.get(id=userid)
+    cartitems=Cart.objects.filter(uid_id=userid)
+    pricelist = cartitems.values_list('prodid__cprodprice', flat=True)
+    totalprice_sum = cartitems.aggregate(total=Sum('prodid__cprodprice'))['total']
+    grandtotal = cartitems.aggregate(total=Sum(F('uprodqty') * F('prodid__cprodprice')))['total'] or 0
+    subtotals = []
+    for item in cartitems:
+        qty=item.uprodqty
+        price = item.prodid.cprodprice
+        subtotal = qty * price
+        subtotals.append(subtotal)
+        totalprice_sum += subtotal
+    zipped_data = zip(cartitems, subtotals)
+   
+    if request.method=='POST':
+             newaddress = request.POST['newaddr']
+             print(newaddress)
+             if newaddress != userdet.uaddr:
+                existing_address = NewAddress.objects.filter(uid_id=userid).first()
+        
+                if existing_address:
+                    existing_address.newaddr = newaddress
+                    existing_address.save()
+                else:
+                    updaddr = NewAddress(uid_id=userid, newaddr=newaddress)
+                    updaddr.save()
+
+   
+    
+    currency ="INR"
+    api_key=RAZORPAY_API_KEY
+    amt=int(grandtotal)*100  
+    payment_order= client.order.create(dict(amount=amt,currency="INR",payment_capture=1))
+    payment_order_id= payment_order['id']
     context ={
-            'userdet':userdet
+            'userdet':userdet,
+            'cartitems':cartitems,
+            'pricelist':pricelist,
+            'totalprice_sum':totalprice_sum,
+            'subtotals':subtotals,
+            'grandtotal':grandtotal,
+            'zipped_data': zipped_data,
+            'api_key':api_key,
+            'order_id':payment_order_id
+
          }
     return render(request,'imsuser/usercheckout.html',context)
+
+client = razorpay.Client(auth=(RAZORPAY_API_KEY, RAZORPAY_API_SECRET_KEY))
+
+from django.utils import timezone
+from datetime import *
+
+def billgeneration(request):
+    userid=request.session['userid']
+    print(userid)
+    today = date.today()
+    cartitems=Cart.objects.filter(uid=userid,status=False)
+    if request.method=='POST':
+        order_id = ''.join(random.choice(string.digits) for i in range(4))
+        cid = []
+        for i in cartitems:
+            cid.append(i.id)
+            print(i.id)
+        print(cid)
+        orderdet=Order.objects.create(orderid=order_id,uid_id=userid)
+        for c in cid:
+            orderdet.cartid.add(Cart.objects.get(id=c))
+            Cart.objects.filter(id=c).update(status=True)
+            print(c)
+        return redirect("billgeneration")
+    order_info=Order.objects.filter(uid=userid,orderdate=today)
+    context={
+        'order_info':order_info
+    }
+    return render(request,'imsuser/billgeneration.html',context) 
 
 
 
